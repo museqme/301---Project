@@ -2,5 +2,5 @@
 
 var app = app || {};
 
-page('/', app.strainsController.index);
+page('./', app.strainsController.index);
 page();
