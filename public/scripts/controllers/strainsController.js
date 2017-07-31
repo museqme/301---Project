@@ -6,7 +6,7 @@ var app = app || {};
   strainsController.index = () => {
     app.strains.fetchAll(app.strainsView.initIndexPage);
 
-    $('#strains').show().siblings().hide();
+    // $('#strains').show().siblings().hide();
   };
 
   module.strainsController = strainsController;

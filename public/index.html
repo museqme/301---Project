@@ -44,6 +44,9 @@
 
 </head>
 <body>
+  <header>
+    <h1>High/Low</h1>
+  </header>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -51,28 +54,45 @@
     <!-- Hero Image Section -->
     <div class="row">
       <div class="ten column" style="margin-top: 25%">
-        <h4>Hero Image Here</h4>
+        <h3>Hero Image Here</h3>
         <!-- inserti img element here -->
       </div>
     </div>
     <!-- Renders Strain List -->
     <div class="row">
       <div class="ten column" id="strains" style="margin-top: 25%">
-        <h4>Strains</h4>
+        <h3>Strains</h3>
         <!-- append strains handlebars template to empty ul tag -->
         <ul></ul>
       </div>
     </div>
 
+    <div class="row">
+      <div class="ten column" id="about" style="margin-top: 25%">
+        <h3>High/Low Team</h3>
+        <h4>Isaiah</h4>
+        <h4>Aaron</h4>
+        <h4>Michelle</h4>
+        <h4>Cameron</h4>
+      </div>
+    </div>
+
+
   </div>
+
+  <footer>&copy;High/Low</footer>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <!-- Scripts -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+<script src="./vendor/scripts/page.js"></script>
+
 <!-- Models -->
+<script src="./public/scripts/models/strainsmodel.js"></script>
 <script src="./public/scripts/models/apiKey.js"></script>
 <script src="./public/scripts/models/strains.js"></script>
 <!-- Views -->

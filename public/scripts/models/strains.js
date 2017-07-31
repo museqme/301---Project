@@ -1,6 +1,5 @@
 'use strict';
 
-'use strict';
 var app = app || {};
 
 (function(module) {
@@ -9,14 +8,14 @@ var app = app || {};
 
   strains.requestRepos = function(callback) {
     $.ajax({
-      url: 'https://api.github.com/user',
+      url: 'https://www.cannabisreports.com/my/api',
       method: 'GET',
       headers: {
         Authorization: `token ${API_KEY}`
       }
     })
     .then(data => {
-      return $.get(data.strains_url);
+      return $.get(data.strains);
     })
     .then(data => {
       callback(null, data);
@@ -33,7 +32,7 @@ var app = app || {};
     console.log('strains: ', strains.all);
   });
 
-  strains.with = attr => strains.all.filter(repo => repo[attr]);
+  strains.with = attr => strains.all.filter(name => name[attr]);
 
   module.strains = strains;
 })(app);
