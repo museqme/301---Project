@@ -1,6 +1,16 @@
 # 301---Project
 
-# User Stories:
+## How to Make a PR:
+Use the below format for the title:
+Driver-Navigator-WhatYouDid
+
+## Our Git Link to Heroku
+https://git.heroku.com/highlow-301.git
+Use the below to hook up to heroku so you can deploy from your computer:
+git remote add heroku https://git.heroku.com/highlow-301.git
+
+
+## User Stories:
 
 - Dev
 1. As a dev I want a clean app that does not trivialize the product we are focusing on.
