@@ -32,9 +32,5 @@ var app = app || {};
     )
   };
 
-  // ---- Database Stuff -----
-
-  
-
   module.Strains = Strains;
 })(app);

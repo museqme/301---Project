@@ -1,14 +1,14 @@
 'use strict';
 
-// const pg = require('pg');
-// const fs = require('fs');
+const pg = require('pg');
+const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://USERNAME:PASSWORD@HOST:PORT';
-const conString = process.env.DATEBASE_URL;
+const conString = 'postgres://postgres:1234@localhost:5432/highlow';
+// const conString = process.env.DATEBASE_URL;
 const client = new pg.Client(conString);
 client.connect();
 client.on('error', err => console.error(err));
