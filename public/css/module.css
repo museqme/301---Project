@@ -31,3 +31,8 @@ font-family: 'Sarala', sans-serif;*/
   padding: 10px 10px 10px 10px;
   margin: 25px;
 }
+
+.nav li {
+  text-decoration: none;
+  display: inline-block;
+}
