@@ -1,13 +1,18 @@
 'use strict';
-var app = app || {};
+// var app = app || {};
 
-(function(module) {
-  const strainsController = {};
-  strainsController.index = () => {
-    app.Strains.fetchAll(app.strainsView.initIndexPage);
+// (function(module) {
+// const strainsController = {};
+// strainsController.index = () => {
+//   app.Strains.fetchAll(app.strainsView.initIndexPage);
 
-    // $('#strains').show().siblings().hide();
-  };
+function hideSections() {
+  // $('.nav').hide();
+  $('#about').hide();
+}
 
-  module.strainsController = strainsController;
-})(app);
+hideSections();
+//   };
+//
+//   module.strainsController = strainsController;
+// })(app);
