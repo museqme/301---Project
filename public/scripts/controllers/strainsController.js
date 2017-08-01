@@ -4,7 +4,7 @@ var app = app || {};
 (function(module) {
   const strainsController = {};
   strainsController.index = () => {
-    app.strains.fetchAll(app.strainsView.initIndexPage);
+    app.Strains.fetchAll(app.strainsView.initIndexPage);
 
     // $('#strains').show().siblings().hide();
   };
