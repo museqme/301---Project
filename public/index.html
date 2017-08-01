@@ -6,8 +6,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>High/Low</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="301 Project" content="High/Low">
+  <meta name="Team Us?" content="Skeleton is so nice">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -15,10 +15,8 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Sarala" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sarala" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/module.css">
@@ -33,35 +31,93 @@
   <!-- Handlebars -->
   <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.js"></script>
 
+  <script id="strains-template" type="text/x-handlebars-template">
+    <li>
+      <h3>{{name}}</h3>
+      <p>Genetic Name:{{genetics.name}}</p>
+      <p>ucpc: {{ucpc}}</p>
+      <p>Company: {{seedCompany.name}}</p>
+    </li>
+  </script>
 
 </head>
 <body>
+  <header class="logo">
+    <h1>High/Low</h1>
+    <section>
+      <div class="row">
+        <form>
+          <fieldset>
+            <ul class="nav">
+              <label for="username"></label>
+              <input name="username" type="text" placeholder="Username"/>
+              <input name="password" type="password" placeholder="Password"/>
+              <select id="dropdown">
+                <option value="rerouter">?????</option>
+                <option value="dispensary">Dispensary</option>
+                <option value="producer">Producer</option>
+                <option value"seeds">Seeds</option>
+                <label id="password" for="password"></label>
+              </select>
+              <button id="submitButton" type="submit">Login</button>
+            </ul>
+          </fieldset>
+        </form>
+      </div>
+    </section>
+  </header>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
+    <!-- Hero Image Section -->
+    <div class="ten column" id= "hero" style="margin-top: 25%">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>High/Low</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+        <!-- inserti img element here -->
       </div>
     </div>
+    <!-- Renders Strain List -->
+    <div class="row">
+      <div class="ten column" id="strains" style="margin-top: 25%">
+        <h3>Strains</h3>
+        <!-- append strains handlebars template to empty ul tag -->
+        <ul></ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="ten column" id="about" style="margin-top: 25%">
+        <h3>High/Low Team</h3>
+        <h4>Isaiah</h4>
+        <h4>Aaron</h4>
+        <h4>Michelle</h4>
+        <h4>Cameron</h4>
+      </div>
+    </div>
+
+
   </div>
 
-<!-- End Document
+  <footer>&copy;High/Low</footer>
+
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <!-- Scripts -->
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/visionmedia/page.js/master/page.js"></script>
+<script src="vendors/page.js"></script>
+
 <!-- Models -->
-<script src="./public/scripts/models/apiKey.js"></script>
-<script src="./public/scripts/models/dispModel.js"></script>
+<script src="scripts/models/strains.js"></script>
+<script src="scripts/models/strainsModel.js"></script>
 <!-- Views -->
-<script src="./public/scripts/views/dispView.js"></script>
+<script src="scripts/views/strainsView.js"></script>
 <!-- Controllers -->
-<script src="./public/scripts/controllers/dispController.js"></script>
-<script src="./public/scripts/controllers/routes.js"></script>
+<script src="scripts/controllers/strainsController.js"></script>
+<script src="scripts/controllers/routes.js"></script>
+
 
 </body>
 </html>

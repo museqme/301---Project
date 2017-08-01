@@ -1,0 +1,57 @@
+/*From SMACCS*/
+/*Base Rules
+
+A Base rule is applied to an element using an element selector,
+a descendent selector, or a child selector, along with any
+pseudo-classes. It doesn’t include any class or ID selectors.
+It is defining the default styling for how that element should look
+in all occurrences on the page.*/
+
+/*Color Scheme
+Fresh #F7EF6A        the yellow
+Vermillion #93C178   the green
+Sunshine #465C8B     the blue, oddly enough
+Clean #DFDCE3        The clearish white*/
+
+/*font-family: 'Black Ops One', cursive; HEADER ONLY
+font-family: 'Sarala', sans-serif;*/
+
+
+body {
+  background-color: #465C8B;
+  text-align: center;
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  max-width: 100%;
+}
+
+main {
+  background-color: #DFDCE3;
+  width: 960px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+header h1 {
+  color: white;
+  font-size: 75px;
+  font-family: 'Black Ops One', cursive;
+}
+
+header {
+  background-image: url('/images/esteban-lopez-272105.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 400px;
+  color: #F7EF6A;
+  background-color: #465C8B;
+  border: 5px solid #F7EF6A;
+  margin: 25px 10px 25px 10px;
+}
+
+div {
+  font-family: 'Sarala', sans-serif;
+}
