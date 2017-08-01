@@ -6,8 +6,8 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>High/Low</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="301 Project" content="High/Low">
+  <meta name="Team Us?" content="Skeleton is so nice">
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -15,10 +15,8 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
-
-  <!-- CSS
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Black+Ops+One|Sarala" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Sarala" rel="stylesheet">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/layout.css">
   <link rel="stylesheet" href="css/module.css">
@@ -44,17 +42,37 @@
 
 </head>
 <body>
-  <header>
+  <header class="logo">
     <h1>High/Low</h1>
+    <section>
+      <div class="row">
+        <form>
+          <fieldset>
+            <ul class="nav">
+              <label for="username"></label>
+              <input name="username" type="text" placeholder="Username"/>
+              <input name="password" type="password" placeholder="Password"/>
+              <select id="dropdown">
+                <option value="rerouter">?????</option>
+                <option value="dispensary">Dispensary</option>
+                <option value="producer">Producer</option>
+                <option value"seeds">Seeds</option>
+                <label id="password" for="password"></label>
+              </select>
+              <button id="submitButton" type="submit">Login</button>
+            </ul>
+          </fieldset>
+        </form>
+      </div>
+    </section>
   </header>
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <!-- Hero Image Section -->
+    <div class="ten column" id= "hero" style="margin-top: 25%">
     <div class="row">
-      <div class="ten column" style="margin-top: 25%">
-        <h3>Hero Image Here</h3>
         <!-- inserti img element here -->
       </div>
     </div>
@@ -82,7 +100,7 @@
 
   <footer>&copy;High/Low</footer>
 
-<!-- End Document
+  <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <!-- Scripts -->
@@ -99,6 +117,7 @@
 <!-- Controllers -->
 <script src="scripts/controllers/strainsController.js"></script>
 <script src="scripts/controllers/routes.js"></script>
+
 
 </body>
 </html>
