@@ -18,11 +18,11 @@ var app = app || {};
     });
   };
 
-  strains.requestStrains((err, data) => {
-    if (err) console.log(err);
-    strains.all = data;
-    console.log('strains: ', strains.all);
-  });
+  // strains.requestStrains((err, data, callback) => {
+  //   if (err) console.log(err);
+  //   strains.all = data;
+  //   console.log('strains: ', strains.all);
+  // });
 
   strains.with = attr => strains.all.filter(name => name[attr]);
 

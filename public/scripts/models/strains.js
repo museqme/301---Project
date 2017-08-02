@@ -17,15 +17,20 @@ var app = app || {};
     return template(this);
   };
 
+  // Strains.loadAll = data => {
+  //   console.log(data)
+    // Strains.all = data.map(name => new Strains(name));
   Strains.loadAll = rows => {
-    rows.sort();
-    Strains.all = rows.map(ele => new Strains(ele));
+    Strains.all = rows[data].map(ele => new Strains(ele));
   };
+    // });
+  // };
 
   Strains.fetchAll = callback => {
     $.get('/strains')
     .then(
       results => {
+        // console.log(results);
         Strains.loadAll(results);
         callback();
       }
@@ -34,7 +39,7 @@ var app = app || {};
 
   // ---- Database Stuff -----
 
-  
+
 
   module.Strains = Strains;
 })(app);
