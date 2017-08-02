@@ -5,9 +5,31 @@ var app = app || {};
   const aboutController = {};
   aboutController.index = () => {
     $('.nav').hide();
-    $('#strains').hide();
+    $('#weeds').hide();
     $('#about').show();
   };
 
   module.aboutController = aboutController;
 })(app);
+
+
+function hideSections() {
+  $('#hero').siblings().hide();
+}
+function navBar() {
+  $('nav').on('click', 'li', function() {
+    console.log($(this).find('a').attr('href'));
+    this.clicked;
+    if (this.clicked === true) {
+      $($(this).find('a').attr('href')).slideUp('slow') && $('#hero').slideDown('slow');
+      console.log('Hide!');
+      this.clicked = false;
+    } else {
+      console.log('click!');
+      $($(this).find('a').attr('href')).slideDown('slow').siblings().slideUp('slow');
+      this.clicked = true;
+    }
+  });
+}
+hideSections();
+navBar();
