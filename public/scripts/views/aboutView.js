@@ -5,7 +5,7 @@ var app = app || {};
   const aboutView = {};
 
   aboutView.initIndexPage = () => {
-    $('#strains').hide();
+    $('#weeds').hide();
   }
   module.aboutView = aboutView;
 })(app);

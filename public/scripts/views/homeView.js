@@ -5,7 +5,7 @@ var app = app || {};
   const homeView = {};
 
   homeView.initIndexPage = () => {
-    $('#strains').hide();
+    $('#weeds').hide();
     $('#about').hide();
   }
   module.homeView = homeView;
