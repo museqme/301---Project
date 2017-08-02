@@ -9,7 +9,6 @@ var app = app || {};
     this.ucpc = data.ucpc;
     this.seedCompany.name = data.seedCompany.name;
   }
-
   Strains.all = [];
 
   Strains.prototype.toHtml = function() {
