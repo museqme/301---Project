@@ -31,6 +31,24 @@ var app = app || {};
       }
     )
   };
+  let next,prev;
+  const successCallBack = function(info) {
+    console.log(info);
+    next = info.next;
+    prev = info.previous;
+  }
+  const errorCallBack = function(err) {
+    console.log(err);
+  }
 
+  $('#next').on('click', function(){
+    $.getJSON(next)
+    .then(successCallBack, errorCallBack);
+  });
+
+  $('#prev').on('click', function() {
+    $.getJSON(prev)
+    .then(successCallBack, errorCallBack)
+  })
   module.Strains = Strains;
 })(app);
