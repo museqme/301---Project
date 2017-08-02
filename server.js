@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://postgres:1234@localhost:5432/highlow';
+const conString = 'postgres://postgres:1234@localHost:5432/highlow';
 // const conString = process.env.DATEBASE_URL;
 const client = new pg.Client(conString);
 client.connect();
@@ -18,30 +18,22 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('public'));
 
 function proxyCanApi(request, response) {
-  console.log("I just logged")
-  console.log(request.headers)
-  console.log('Routing CannabisReports request for', request.params[0]);
-  var data = (requestProxy({
+  var returnData = (requestProxy({
     url: `https://www.cannabisreports.com/api/v1.0/strains`,
-    // headers: {
-    //   // beforeSend: function(origin) {
-    //     // origin.setRequestHeader('Accept', 'https://www.cannabisreports.com/api/v1.0/strains');
-    //     // origin.setRequestHeader('Authorization', 'X-API-Key', `${process.env.X_API_KEY}`);
-    //     // origin.send();
-    //   }
-    // }
   }))(request, response);
-  JSON.parse(data).forEach(ele => {
-    client.query(`
-      INSERT INTO
-      strains(ucpc, seedCompanies.ucpc, genetics)
-      SELECT ucpc, $1, $2
-      FROM seed-companies
-      WHERE name=$3;
-    `,
-      [ele.title, ele.category, ele.publishedOn, ele.body, ele.author]
-    )
-    .catch(console.error);
+  // JSON.parse(returnData).forEach(ele => {
+  //   client.query(`
+  //     INSERT INTO
+  //     strains(ucpc, seedCompanies.ucpc, genetics)
+  //     SELECT ucpc, $1, $2
+  //     FROM seed-companies
+  //     WHERE name=$3;
+  //   `,
+  //     [ele.title, ele.category, ele.publishedOn, ele.body, ele.author]
+  //   )
+  //   .catch(console.error);
+  // })
+  console.log(returnData);
 }
 
 app.get('/strains', proxyCanApi);
