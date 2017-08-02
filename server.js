@@ -7,11 +7,11 @@ const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://USERNAME:PASSWORD@HOST:PORT';
-const conString = process.env.DATEBASE_URL;
-const client = new pg.Client(conString);
-client.connect();
-client.on('error', err => console.error(err));
+const conString = 'postgres://postgres:1234@localHost:5432';
+// const conString = process.env.DATEBASE_URL;
+// const client = new pg.Client(conString);
+// client.connect();
+// client.on('error', err => console.error(err));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
