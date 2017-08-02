@@ -32,14 +32,16 @@
   <script src="https://cdn.jsdelivr.net/handlebarsjs/4.0.8/handlebars.js"></script>
 
   <script id="strains-template" type="text/x-handlebars-template">
-    <li>
-      <h3>{{name}}</h3>
-      <p>Genetic Name:{{genetics.name}}</p>
-      <p>ucpc: {{ucpc}}</p>
-      <p>Company: {{seedCompany.name}}</p>
-    </li>
+    {{#each strain}}
+      <ul>
+        <h2>{{name}}</h2>
+        <li>Genetics: {{genetics.names}}</li>
+        <li>Seed Company: {{seedCompany.name}}</li>
+        <li>Seed Company UCPC: {{seedCompany.ucpc}}</li>
+        <li>Strain UPCP: {{ucpc}}</li>
+      </ul>
+    {{/each}}
   </script>
-
 </head>
 <body>
   <header class="logo">
@@ -74,13 +76,11 @@
     <!-- Renders Strain List -->
     <div class="row">
       <div class="ten column" id="strains" style="margin-top: 25%">
-        <h3>Strains</h3>
         <!-- append strains handlebars template to empty ul tag -->
-        <ul></ul>
       </div>
     </div>
 
-    <div class="row">
+    <!-- <div class="row">
       <div class="ten column" id="about" style="margin-top: 25%">
         <h3>High/Low Team</h3>
         <h4>Isaiah</h4>
@@ -88,7 +88,7 @@
         <h4>Michelle</h4>
         <h4>Cameron</h4>
       </div>
-    </div>
+    </div> -->
 
 
   </div>
@@ -106,12 +106,12 @@
 
 <!-- Models -->
 <script src="scripts/models/strains.js"></script>
-<script src="scripts/models/strainsModel.js"></script>
+<!-- <script src="scripts/models/strainsModel.js"></script> -->
 <!-- Views -->
-<script src="scripts/views/strainsView.js"></script>
+<!-- <script src="scripts/views/strainsView.js"></script> -->
 <!-- Controllers -->
-<script src="scripts/controllers/strainsController.js"></script>
-<script src="scripts/controllers/routes.js"></script>
+<!-- <script src="scripts/controllers/strainsController.js"></script> -->
+<!-- <script src="scripts/controllers/routes.js"></script> -->
 
 
 </body>
