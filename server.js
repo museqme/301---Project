@@ -7,7 +7,7 @@ const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
 const app = express();
-const conString = 'postgres://localhost:5432/highlow';
+const conString = 'postgres://postgres:1234@localhost:5432/highlow';
 // const conString = process.env.DATEBASE_URL;
 const client = new pg.Client(conString);
 client.connect();
@@ -21,7 +21,7 @@ function proxyCanApi(request, response) {
   console.log("I just logged")
   console.log(request.headers)
   console.log('Routing CannabisReports request for', request.params[0]);
-  (requestProxy({
+  var data = (requestProxy({
     url: `https://www.cannabisreports.com/api/v1.0/strains`,
     // headers: {
     //   // beforeSend: function(origin) {
@@ -31,7 +31,17 @@ function proxyCanApi(request, response) {
     //   }
     // }
   }))(request, response);
-  // console.log(response);
+  JSON.parse(data).forEach(ele => {
+    client.query(`
+      INSERT INTO
+      strains(ucpc, seedCompanies.ucpc, genetics)
+      SELECT ucpc, $1, $2
+      FROM seed-companies
+      WHERE name=$3;
+    `,
+      [ele.title, ele.category, ele.publishedOn, ele.body, ele.author]
+    )
+    .catch(console.error);
 }
 
 app.get('/strains', proxyCanApi);
@@ -47,28 +57,28 @@ app.listen(PORT, function() {
 // =============================================================================================
 // =============================================================================================
 
-
-function loadStrains() {
-  client.query('SELECT COUNT(*) FROM strains')
-  .then(result => {
-    if(!parseInt(result.rows[0].count)) {
-      fs.get('https://www.cannabisreports.com/api/v1.0/strains', (err, fd) => {
-        JSON.parse(fd.toString()).forEach(ele => {
-          client.query(`
-            INSERT INTO
-            strains(ucpc, seedCompanies.ucpc, genetics)
-            SELECT ucpc, $1, $2
-            FROM seed-companies
-            WHERE name=$3;
-          `,
-            [ele.title, ele.category, ele.publishedOn, ele.body, ele.author]
-          )
-          .catch(console.error);
-        })
-      })
-    }
-  })
-}
+//
+// function loadStrains() {
+//   client.query('SELECT COUNT(*) FROM strains')
+//   .then(result => {
+//     if(!parseInt(result.rows[0].count)) {
+//       fs.get('https://www.cannabisreports.com/api/v1.0/strains', (err, fd) => {
+//         JSON.parse(fd.toString()).forEach(ele => {
+//           client.query(`
+//             INSERT INTO
+//             strains(ucpc, seedCompanies.ucpc, genetics)
+//             SELECT ucpc, $1, $2
+//             FROM seed-companies
+//             WHERE name=$3;
+//           `,
+//             [ele.title, ele.category, ele.publishedOn, ele.body, ele.author]
+//           )
+//           .catch(console.error);
+//         })
+//       })
+//     }
+//   })
+// }
 
 function loadDB() {
   client.query(`
@@ -80,7 +90,7 @@ function loadDB() {
       strains VARCHAR (255)
     );`
   )
-  .then(loadStrains)
+  // .then(loadStrains)
   .catch(console.error);
 
  client.query(`
@@ -91,6 +101,28 @@ function loadDB() {
       genetics VARCHAR (500),
     );`
   )
-  .then(loadStrains)
+  // .then(loadStrains)
   .catch(console.error);
 }
+
+loadDB();
+//
+// function queryThree(author_id) {
+//     client.query(
+//       `INSERT INTO
+//       articles(author_id, title, category, "publishedOn", body)
+//       VALUES ($1, $2, $3, $4, $5);`,
+//       [
+//         author_id,
+//         request.body.title,
+//         request.body.category,
+//         request.body.publishedOn,
+//         request.body.body
+//       ],
+//       function(err) {
+//         if (err) console.error(err);
+//         response.send('insert complete');
+//       }
+//     );
+//   }
+// });
