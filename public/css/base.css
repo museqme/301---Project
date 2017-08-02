@@ -35,7 +35,7 @@ main {
 
 header h1 {
   color: white;
-  font-size: 75px;
+  /*font-size: 75px;*/
   font-family: 'Black Ops One', cursive;
 }
 
@@ -45,10 +45,12 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 100%;
+  min-width: 300px;
   height: 400px;
   color: #F7EF6A;
   background-color: #465C8B;
   border: 5px solid #F7EF6A;
+  border-radius: 20px;
   margin: 25px 10px 25px 10px;
 }
 

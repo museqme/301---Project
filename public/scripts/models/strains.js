@@ -18,12 +18,12 @@ let errorCallback = function(err) {
 $.getJSON('https://www.cannabisreports.com/api/v1.0/strains')
     .then(sucessCallback, errorCallback);
 
-let hideAll = function() {
-  $('.logo').show().siblings().hide();
-}
-
-
-hideAll();
+// let hideAll = function() {
+//   $('.logo').show().siblings().hide();
+// }
+//
+//
+// hideAll();
 // --- The Below is the previous code ---
 
 // var app = app || {};
