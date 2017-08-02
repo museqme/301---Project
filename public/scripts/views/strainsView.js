@@ -8,8 +8,8 @@ var app = app || {};
     // ---- Commented sections are possible filter functionality-----
     // $('#ajax-spinner').fadeOut();
     // $('#filters').fadeIn();
-    app.Strains.all.forEach(strains => {
-      $('#strains').append(strains.toHtml('#strains-template'));
+    app.Strains.all.forEach(strain => {
+      $('#strains').append(strain.toHtml());
       // if($(`#category-filter option:contains("${strains.category}")`).length === 0) {
       //   $('#category-filter').append(strains.toHtml('#category-filter-template'));
       // }
