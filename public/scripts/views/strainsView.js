@@ -7,7 +7,7 @@ var app = app || {};
   strainsView.initIndexPage = () => {
 
     app.Strains.all.forEach(strain => {
-      $('#strains').append(strain.toHtml());
+      $('#weeds').append(strain.toHtml());
     });
   };
 
