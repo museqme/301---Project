@@ -17,14 +17,9 @@ var app = app || {};
     return template(this);
   };
 
-  // Strains.loadAll = data => {
-  //   console.log(data)
-    // Strains.all = data.map(name => new Strains(name));
   Strains.loadAll = rows => {
     Strains.all = rows[data].map(ele => new Strains(ele));
   };
-    // });
-  // };
 
   Strains.fetchAll = callback => {
     $.get('/strains')
@@ -36,10 +31,6 @@ var app = app || {};
       }
     )
   };
-
-  // ---- Database Stuff -----
-
-
 
   module.Strains = Strains;
 })(app);
