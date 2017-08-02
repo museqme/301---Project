@@ -6,6 +6,7 @@ var app = app || {};
   aboutController.index = () => {
     $('.nav').hide();
     $('#strains').hide();
+    $('#about').show();
   };
 
   module.aboutController = aboutController;
