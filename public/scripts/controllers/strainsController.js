@@ -8,7 +8,7 @@ var app = app || {};
 
     function hideSections() {
       $('.nav').hide();
-      $('#about').hide();
+      // $('#about').hide();
     }
 
     hideSections();

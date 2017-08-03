@@ -35,3 +35,9 @@ font-family: 'Sarala', sans-serif;*/
 #dropDown {
   background-color: #DFDCE3;
 }
+
+#weeds {
+  background-color: #93C178;
+  border: 5px solid #F7EF6A;
+  border-radius: 20px;
+}

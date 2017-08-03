@@ -25,14 +25,27 @@ Clean #DFDCE3        The clearish white*/
 font-family: 'Sarala', sans-serif;*/
 
 .header {
-  background-color: ##465C8B ;
+  background-color: #465C8B ;
   max-width: 100%;
   border: 5px solid #93C178;
   padding: 10px 10px 10px 10px;
   margin: 25px;
 }
 
+.mainNav li {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .nav li {
   text-decoration: none;
   display: inline-block;
+}
+
+.siteInfo {
+  margin: auto;
+  border-radius: 20px;
+  background-color: rgba(70, 92, 139, .85);
+  padding: 0;
+  max-width: 80%;
 }

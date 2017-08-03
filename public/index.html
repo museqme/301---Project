@@ -24,6 +24,7 @@
 
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="./vendors/font-awesome-4.7.0/css/font-awesome.min.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -34,6 +35,7 @@
 
   <script id="strains-template" type="text/x-handlebars-template">
     {{#each strain}}
+
     <ul>
       <h2>{{name}}</h2>
       <li>Genetics: {{genetics.names}}</li>
@@ -41,6 +43,7 @@
       <li>Seed Company UCPC: {{seedCompany.ucpc}}</li>
       <li>Strain UCPC: {{ucpc}}</li>
     </ul>
+
     {{/each}}
   </script>
   <script id="strainResults" type="text/x-handlbars-template">
@@ -58,23 +61,27 @@
 </head>
 
 <body>
+  <i class="fa fa-bars" aria-hidden="true"></i>
+  <ul class="mainNav">
+    <li class="tabs"><a href='/'><i class="fa fa-home" aria-hidden="true"></i></a></li>
+    <li class="tabs"><a href='/about'><i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
+  </ul>
   <header class="logo">
-    <ul class="mainNAv">
-      <li><a href='/'>Home</a></li>
-      <li><a href='/about'>About Us</a></li>
-    </ul>
     <h1>High/Low</h1>
-    <p>Manifestation planetary transition the dali lama lentils all-encompassing gifting circle talking stick embracing and moving towards, seasonal vipassana backjack. Master cleanse world conflict resolution somatic mind-body, sharing discovering valuable
-      truths clarity essential oils.
-      <section>
-        <div class="row">
-          <form>
-            <fieldset>
-              <ul class="nav">
-                <label for="username"></label>
-                <li><input name="username" type="text" placeholder="Username" /></li>
-                <li><input name="password" type="password" placeholder="Password" /></li>
-                <!-- <li><select id="dropdown">
+
+    <div class="siteInfo">
+      <p>Manifestation planetary transition the dali lama lentils all-encompassing gifting circle talking stick embracing and moving towards.</p>
+    </div>
+    <section>
+      <div class="row">
+        <form>
+          <fieldset>
+            <ul class="nav">
+              <label for="username"></label>
+              <li><input name="username" type="text" placeholder="Username"/></li>
+              <li><input name="password" type="password" placeholder="Password"/></li>
+              <!-- <li><select id="dropdown">
+
               <option value="rerouter">?????</option>
               <option value="dispensary">Dispensary</option>
               <option value="producer">Producer</option>
@@ -92,6 +99,7 @@
 
   <!-- Primary Page Layout
 ––––––––––––––––––––––––––––––––––––––– ––––––––––– -->
+
   <div class="container">
     <!-- Renders Strain List -->
     <div class="row">
@@ -109,34 +117,31 @@
           <button type="button" id="next">Next 10</button>
         </form>
       </div>
+
     </div>
 
 
-    <div class="row">
-      <div class="ten column" id="about" style="margin-top: 5%">
-        <h3>High/Low Team</h3>
-        <ul>
-          <li class="one">
-            <h4>Isaiah</h4></li>
 
-          <li class="two">
-            <h4>Aaron</h4>
-            <p>Aaron moved to Seattle from San Francisco in 1999. He worked in retail and bank management for many years but transitioned into a role as an Office Manager and Paralegal in 2012. During that time he assisted on several high profile lawsuits
-              including the Oso Land Slide case in Snohomish County. Earlier this year he decided that he needed a change and a career more inline with the direction Seattle has been moving. This led him to Code Fellows and a future in tech. Aaron moved
-              to Seattle in 1999. I have spent the last 5 years working as a Office Manager/Paralegal but decided earlier this year I needed a change and enrolled in the 101 course. I loved it and here I am.</p>
-          </li>
+  <div class="row">
+    <div class="ten column" id="about" style="margin-top: 5%">
+      <h3>High/Low Team</h3>
+      <ul class="float">
+        <li class="one"><h4>Isaiah</h4>
+          <p>Come along, Pond! Bow ties are cool. No idea. Just do what I do: hold tight and pretend it's a plan. Brave heart, Clara. Look at me. No plans, no backup, no weapons worth a damn. Oh, and something else I don't have: anything to lose. So, if you're sitting up there with your silly little spaceships and your silly little guns and you've any plans on taking the Pandorica tonight; just remember who's standing in your way. Remember every black day I ever stopped you and then, and then, do the smart thing. Let somebody else try first.</p>
+        </li>
+
+       <li class="two"><h4>Aaron</h4>
+         <p>Aaron moved to Seattle from San Francisco in 1999.  He worked in retail and bank management for many years but transitioned into a role as an Office Manager and Paralegal in 2012. During that time he assisted on several high profile lawsuits including the Oso Land Slide case in Snohomish County. Earlier this year he decided that he needed a change and a career more inline with the direction Seattle has been moving. This led him to Code Fellows and a future in tech. Aaron moved to Seattle in 1999. I have spent the last 5 years working as a Office Manager/Paralegal but decided earlier this year I needed a change and enrolled in the 101 course. I loved it and here I am.</p>
+       </li>
 
 
-          <li class="three">
-            <h4>Michelle</h4>
-            <p>Michelle Scharlock is pursuing the Full Stack Javascript development track at Code Fellows and is having a blast in the 301 class. She is fascinated by single page apps and has a love of all things big data developed during her job promoting
-              SQL Server at Waggener Edstrom. michelle-aaron-workingonNav Her life before tech included several formative years after graduating from McGill University working for nonprofits, including the Ronald McDonald House of Western Washington and
-              Alaska, Metropolitan Opera National Council Northwest, the Seattle Shakespeare Company, the Seattle Opera, and the America’s Music Festivals radio series just to name a few. In her spare time, she can be found hunting for antiques, taking
-              ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.</p>
-          </li>
+      <li class="three"><h4>Michelle</h4>
+        <p>Michelle Scharlock is pursuing the Full Stack Javascript development track at Code Fellows and is having a blast in the 301 class. She is fascinated by single page apps and has a love of all things big data developed during her job promoting SQL Server at Waggener Edstrom.Her life before tech included several formative years after graduating from McGill University  working for nonprofits, including the Ronald McDonald House of Western Washington and Alaska, Metropolitan Opera National Council Northwest, the Seattle Shakespeare Company, the Seattle Opera, and the America’s Music Festivals radio series just to name a few.In her spare time, she can be found hunting for antiques, taking ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.</p>
+    </li>
 
-          <li class="four">
-            <h4>Cameron</h4></li>
+      <li class="four"><h4>Cameron</h4>
+        <p>She see the polo draws, she start to debriefing. You say you got a man, well I don't care girl. Drive slow homie, drive slow. To tell young Shmurda that he had some better options. Till it's evening time,. I need all my bad mamis, front and center. I'm in the walls now, I'm wired up. [Verse 1]. Me gusta mami, y yo te quiero. Cause I'm right here, he way over there girl. Better get your man if he sentimental. 'Cause we ain't just letting off the instrumentals no more. The force will be with you always. Drive slow homie, drive slow.</p>
+      </li>
       </div>
     </div> -->
 
