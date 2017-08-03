@@ -6,6 +6,8 @@ let sucessCallback = function(data) {
   var obj = data;
   var objToArr = Object.keys(obj).map(function(key) {return obj[key]});
   console.log(objToArr);
+  var dataArr = objToArr[0];
+  console.log(dataArr);
   let template = Handlebars.compile($('#strains-template').html())
   $('#strains').html(template({strain: dataArr}))
 
