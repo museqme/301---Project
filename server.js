@@ -6,6 +6,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const requestProxy = require('express-request-proxy');
 const PORT = process.env.PORT || 3000;
+const cors = require('cors');
 const app = express();
 
 // const conString = 'postgres://postgres:1234@localhost:5432/highlow';
@@ -15,6 +16,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(cors())
 app.use(express.static('public'));
 
 function proxyCanApi(request, response) {
@@ -22,11 +24,8 @@ function proxyCanApi(request, response) {
   console.log(request.headers)
   console.log('Routing CannabisReports request for stuff!');
   (requestProxy({
-    beforeSend: function(origin) {
-      origin.setRequestHeader('Accept', 'https://www.cannabisreports.com/api/v1.0/strains');
-      origin.setRequestHeader('Authorization', 'X_API_Key', `${process.env.X_API_KEY}`);
-      origin.send();
-    }
+    url: `https://www.cannabisreports.com/api/v1.0/strains`,
+    headers: {Authorization: `${process.env.X_API_KEY}`}
   }))(request, response);
 }
 //     //   // beforeSend: function(origin) {
