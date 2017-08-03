@@ -25,7 +25,8 @@ Clean #DFDCE3        The clearish white*/
 font-family: 'Sarala', sans-serif;*/
 #michelle {
   position: relative;
-  bottom: 35em;
+  bottom: 30em;
+
 }
 #aaron {
   position: relative;
@@ -57,5 +58,8 @@ font-family: 'Sarala', sans-serif;*/
 #strains {
   background-color: #93C178;
   border: 5px solid #F7EF6A;
-  border-radius: 20px;  
+  border-radius: 20px;
+}
+#about {
+  padding: 3em;
 }
