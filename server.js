@@ -22,8 +22,11 @@ function proxyCanApi(request, response) {
   console.log(request.headers)
   console.log('Routing CannabisReports request for stuff!');
   (requestProxy({
-    url: `https://www.cannabisreports.com/api/v1.0/strains`,
-    headers: {Authorization: `${process.env.X_API_KEY}`}
+    beforeSend: function(origin) {
+      origin.setRequestHeader('Accept', 'https://www.cannabisreports.com/api/v1.0/strains');
+      origin.setRequestHeader('Authorization', 'X_API_Key', `${process.env.X_API_KEY}`);
+      origin.send();
+    }
   }))(request, response);
 }
 //     //   // beforeSend: function(origin) {
