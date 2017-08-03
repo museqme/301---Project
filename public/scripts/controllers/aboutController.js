@@ -5,14 +5,14 @@ var app = app || {};
   const aboutController = {};
   aboutController.index = () => {
     $('.nav').hide();
-    // $('#weeds').hide();
+    $('#weeds').hide();
     $('#about').show();
   };
 
   module.aboutController = aboutController;
 })(app);
 
-// 
+//
 // function hideSections() {
 //   $('#hero').siblings().hide();
 // }
