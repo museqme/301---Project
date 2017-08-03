@@ -5,7 +5,7 @@ $('#seedForm').submit(function(event) {
   var strainSearch = $('#strainSearch').val();
   console.log(strainSearch);
   // return strainSearch
-  $.getJSON('/strains/search/' + strainSearch)
+  $.getJSON('https://www.cannabisreports.com/api/v1.0/strains/search/' + strainSearch)
   .then(searchRequest, errorCallback);
 });
 let searchRequest = function(data) {
