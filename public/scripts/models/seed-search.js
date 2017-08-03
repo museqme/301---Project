@@ -5,7 +5,8 @@ $('#seedForm').submit(function(event) {
   var strainSearch = $('#strainSearch').val();
   console.log(strainSearch);
   // return strainSearch
-  return strainSearch();
+  $.getJSON('https://www.cannabisreports.com/api/v1.0/strains/search/' + strainSearch)
+  .then(searchRequest, errorCallback);
 });
   let searchRequest = function(data) {
     console.log(data)
@@ -17,8 +18,6 @@ $('#seedForm').submit(function(event) {
     let template = Handlebars.compile($('#strainResults').html())
     $('#strains').html(template({strain: dataArr}))
 };
-    let errorCallback = function(err) {
-      console.error(err)
-    }
-    $.getJSON('https://www.cannabisreports.com/api/v1.0/strains/search/' + strainSearch)
-    .then(searchRequest(strainSearch), errorCallback);
+    // let errorCallback = function(err) {
+    //   console.error(err)
+    // }
