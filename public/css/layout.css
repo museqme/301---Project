@@ -25,7 +25,7 @@ Clean #DFDCE3        The clearish white*/
 font-family: 'Sarala', sans-serif;*/
 #topLogo {
   padding: 3em;
-  padding-bottom: 3.5em;  
+  padding-bottom: 3.5em;
 }
 #user_nav {
   color: #DFDCE3;
@@ -45,7 +45,8 @@ font-family: 'Sarala', sans-serif;*/
   border: 5px solid #F7EF6A;
   border-radius: 20px;
 }
-
-/*#about li {
-  display: inline-block;
-}*/
+#strains {
+  background-color: #93C178;
+  border: 5px solid #F7EF6A;
+  border-radius: 20px;  
+}
