@@ -24,26 +24,27 @@ app.use(express.static('public'));
 function proxyCanApi(request, response) {
   console.log('Isaiah was here: proxyCanApi');
   console.log(request.headers)
-  console.log('Routing CannabisReports request for stuff!');
+  console.log('Routing CannabisReports request for strains!');
   (requestProxy({
     url: `https://www.cannabisreports.com/api/v1.0/strains`,
     headers: {Authorization: `${process.env.X_API_KEY}`}
   }))(request, response);
 }
 
-// function proxyCanApiSeeds(request, response) {
-//   console.log('Isaiah was here: proxyCanApiSeeds');
-//   console.log(request.headers)
-//   console.log('Routing CannabisReports request for stuff!');
-//   (requestProxy({
-//     url: `https://www.cannabisreports.com/api/v1.0/strains/search`,
-//     headers: {Authorization: `${process.env.X_API_KEY}`}
-//   }))(request, response);
-// }
+function proxyCanApiSeeds(request, response) {
+  // console.log('Isaiah was here: proxyCanApiSeeds');
+  // console.log(request.headers)
+  // console.log('Routing CannabisReports request for search query!');
+  console.log(request.params[0]);
+  (requestProxy({
+    url: `https://www.cannabisreports.com/api/v1.0/strains/search/${request.params[0]}`,
+    headers: {Authorization: `${process.env.X_API_KEY}`}
+  }))(request, response);
+}
 
 
 app.get('/strains', proxyCanApi);
-app.get('/strains/search', proxyCanApi);
+app.get('/search/*', proxyCanApiSeeds);
 
 app.listen(PORT, function() {
   console.log(`'listening on PORT: ${PORT}'`)

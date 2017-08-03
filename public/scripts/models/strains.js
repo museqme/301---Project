@@ -25,7 +25,7 @@ let sucessCallback = function(data) {
 //   prev = metaPrev;
 // }
 
-var errorCallback = function(err) {
+const errorCallback = function(err) {
   console.error(err)
 }
 
