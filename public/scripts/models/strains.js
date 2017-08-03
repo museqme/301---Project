@@ -1,4 +1,5 @@
 'use strict';
+let next, prev;
 
 let sucessCallback = function(data) {
   console.log(data)
@@ -7,16 +8,39 @@ let sucessCallback = function(data) {
   console.log(objToArr);
   var dataArr = objToArr[0];
   console.log(dataArr);
+  var metaArray = objToArr[1];
+  console.log(metaArray);
+  var metaObjToArr = Object.keys(obj).map(function(key) {return obj[key]});
+  console.log(metaObjToArr);
   let template = Handlebars.compile($('#strains-template').html())
   $('#strains').html(template({strain: dataArr}))
 }
 
-let errorCallback = function(err) {
+// var thing = function(data) {
+//   var metaNext = data.meta.pagination.links.next;
+//   var metaPrev = data.meta.pagination.links.previous;
+//   console.log(metaNext, metaPrev);
+//   next = metaNext;
+//   console.log(metaNext)
+//   prev = metaPrev;
+// }
+
+var errorCallback = function(err) {
   console.error(err)
 }
 
 $.getJSON('/strains')
     .then(sucessCallback, errorCallback);
+
+
+// $('#next').on('click', function() {
+//   $.getJSON('/strains')
+//   .then(thing, errorCallback);
+// })
+//
+// $('#prev').on('click', function() {
+//   $.getJSON('/strains').then(thing, errorCallback)
+// });
 
 // let hideAll = function() {
 //   $('.logo').show().siblings().hide();
