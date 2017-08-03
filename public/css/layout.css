@@ -54,7 +54,8 @@ font-family: 'Sarala', sans-serif;*/
   border: 5px solid #F7EF6A;
   border-radius: 20px;
 }
-
-/*#about li {
-  display: inline-block;
-}*/
+#strains {
+  background-color: #93C178;
+  border: 5px solid #F7EF6A;
+  border-radius: 20px;  
+}
