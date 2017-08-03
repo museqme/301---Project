@@ -11,11 +11,11 @@ let sucessCallback = function(data) {
 
 }
 
-var dataArr = objToArr[1];
-console.log(dataArr);
-var url = dataArr.pagination.links.next;
-console.log(url);
-let next = url;
+// var dataArr = objToArr[1];
+// console.log(dataArr);
+// var url = dataArr.pagination.links.next;
+// console.log(url);
+// let next = url;
 
 
 // var thing = function(data) {
