@@ -23,6 +23,15 @@ Clean #DFDCE3        The clearish white*/
 
 /*font-family: 'Black Ops One', cursive; HEADER ONLY
 font-family: 'Sarala', sans-serif;*/
+#michelle {
+  position: relative;
+  bottom: 35em;
+}
+#aaron {
+  position: relative;
+  top: 5em;
+}
+
 #topLogo {
   padding: 3em;
   padding-bottom: 3.5em;
