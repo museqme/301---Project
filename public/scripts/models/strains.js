@@ -15,7 +15,16 @@ let errorCallback = function(err) {
   console.error(err)
 }
 
-$.getJSON('http://www.cannabisreports.com/api/v1.0/strains')
+$.getJSON({
+  url: 'https://www.cannabisreports.com/api/v1.0/strains',
+  headers: {
+    beforeSend: function(origin) {
+      origin.setRequestHeader('Accept', 'https://www.cannabisreports.com/api/v1.0/strains');
+      origin.setRequestHeader('Authorization', 'X-API-Key', `${X_API_KEY}`);
+      origin.send();
+    }
+  }
+})
     .then(sucessCallback, errorCallback);
 
 // let hideAll = function() {

@@ -19,8 +19,8 @@ app.use(express.static('public'));
 
 // function proxyCanApi(request, response) {
 //   console.log('Isaiah was here: proxyCanApi');
-//   // console.log(request.headers)
-//   // console.log('Routing CannabisReports request for', request.params[0]);
+//   console.log(request.headers)
+//   console.log('Routing CannabisReports request for', request.params[0]);
 //   (requestProxy({
 //     url: `https://www.cannabisreports.com/api/v1.0/strains`,
 //     // headers: {
@@ -32,8 +32,8 @@ app.use(express.static('public'));
 //     // }
 //   }))(request, response);
 // }
-//
-// app.get('/strains', proxyCanApi);
+
+app.get('/strains'); //, proxyCanApi
 
 app.listen(PORT, function() {
   console.log(`'listening on PORT: ${PORT}'`)
