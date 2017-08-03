@@ -23,6 +23,10 @@ Clean #DFDCE3        The clearish white*/
 
 /*font-family: 'Black Ops One', cursive; HEADER ONLY
 font-family: 'Sarala', sans-serif;*/
+#topLogo {
+  padding: 3em;
+  padding-bottom: 3.5em;  
+}
 #user_nav {
   color: #DFDCE3;
   float: right;

@@ -24,6 +24,10 @@ Clean #DFDCE3        The clearish white*/
 /*font-family: 'Black Ops One', cursive; HEADER ONLY
 font-family: 'Sarala', sans-serif;*/
 
+
+.fa {
+  color: #F7EF6A;
+}
 .header {
   background-color: #465C8B ;
   max-width: 100%;
@@ -33,8 +37,12 @@ font-family: 'Sarala', sans-serif;*/
 }
 
 .mainNav li {
+  color: ;
+  font-size: 3em;
   text-decoration: none;
   display: inline-block;
+  float: right;
+  padding-right: .5em;
 }
 
 .nav li {
@@ -43,9 +51,11 @@ font-family: 'Sarala', sans-serif;*/
 }
 
 .siteInfo {
+  font-size: 3em;
+  color: white;
   margin: auto;
   border-radius: 20px;
   background-color: rgba(70, 92, 139, .85);
-  padding: 0;
+  padding: 1em;
   max-width: 80%;
 }

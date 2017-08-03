@@ -38,6 +38,9 @@ header h1 {
   /*font-size: 75px;*/
   font-family: 'Black Ops One', cursive;
 }
+input.text {
+  background-color: #DFDCE3;
+}
 
 header {
   background-image: url('/images/esteban-lopez-272105.jpg');
@@ -46,14 +49,19 @@ header {
   background-repeat: no-repeat;
   max-width: 100%;
   min-width: 300px;
-  height: 400px;
+  height: 300px;
   color: #F7EF6A;
   background-color: #465C8B;
   border: 5px solid #F7EF6A;
   border-radius: 20px;
   margin: 25px 10px 25px 10px;
 }
-
+form {
+  padding: 1em;
+  padding-top: 5em;
+  align-items: center;
+}
 div {
   font-family: 'Sarala', sans-serif;
 }
+citein
