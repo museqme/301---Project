@@ -41,3 +41,12 @@ font-family: 'Sarala', sans-serif;*/
   border: 5px solid #F7EF6A;
   border-radius: 20px;
 }
+
+#topbar {
+  background-color: rgb(9, 47, 83);
+  height: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+  border-radius: 0.8em;
+  margin-top: 0.2em;
+}

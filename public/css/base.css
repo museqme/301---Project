@@ -40,18 +40,19 @@ header h1 {
 }
 
 header {
-  background-image: url('/images/esteban-lopez-272105.jpg');
+  background-image: url(/images/esteban-lopez-272105.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  max-width: 100%;
+  max-width: 75%;
   min-width: 300px;
   height: 400px;
   color: #F7EF6A;
   background-color: #465C8B;
-  border: 5px solid #F7EF6A;
-  border-radius: 20px;
-  margin: 25px 10px 25px 10px;
+  /* border: 5px solid #F7EF6A; */
+  border-radius: 1em;
+  margin: 0 auto;
+  margin-top: 1em;
 }
 
 div {
