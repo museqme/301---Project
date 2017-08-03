@@ -21,8 +21,10 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "cannabis-reports": "^1.1.9",
+    "cors": "^2.8.4",
     "express": "^4.15.3",
     "express-request-proxy": "^2.0.0",
-    "pg": "^7.0.2"
+    "pg": "^7.0.2",
+    "superagent": "^3.5.2"
   }
 }
