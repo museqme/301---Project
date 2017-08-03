@@ -15,7 +15,7 @@ let errorCallback = function(err) {
   console.error(err)
 }
 
-$.getJSON('https://www.cannabisreports.com/api/v1.0/strains')
+$.getJSON('http://www.cannabisreports.com/api/v1.0/strains')
     .then(sucessCallback, errorCallback);
 
 // let hideAll = function() {
