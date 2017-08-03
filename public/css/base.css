@@ -15,7 +15,9 @@ Clean #DFDCE3        The clearish white*/
 
 /*font-family: 'Black Ops One', cursive; HEADER ONLY
 font-family: 'Sarala', sans-serif;*/
-
+li {
+  text-decoration: none;
+}
 
 body {
   background-color: #465C8B;
@@ -64,4 +66,3 @@ form {
 div {
   font-family: 'Sarala', sans-serif;
 }
-citein
