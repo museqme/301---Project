@@ -21,8 +21,7 @@ $.getJSON('https://www.cannabisreports.com/api/v1.0/strains')
 // let hideAll = function() {
 //   $('.logo').show().siblings().hide();
 // }
-//
-//
+
 // hideAll();
 // --- The Below is the previous code ---
 

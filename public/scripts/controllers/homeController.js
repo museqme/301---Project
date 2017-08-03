@@ -8,6 +8,7 @@ var app = app || {};
     // $('#about').hide();
     $('.nav').show();
   };
+
   // $('.logo').show().siblings().hide();
 
 
