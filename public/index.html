@@ -37,11 +37,11 @@
     {{#each strain}}
 
     <ul>
-      <h2>{{name}}</h2>
-      <!-- <li>Genetics: {{genetics.names}}</li> -->
+      <h3>{{name}}</h3>
+      <li>Genetics: {{genetics.names}}</li>
       <li>Seed Company: {{seedCompany.name}}</li>
       <li>Seed Company UCPC: {{seedCompany.ucpc}}</li>
-      <!-- <li>Strain UCPC: {{ucpc}}</li> -->
+      <li>Strain UCPC: {{ucpc}}</li><hr/>
     </ul>
 
     {{/each}}
@@ -49,7 +49,7 @@
   <script id="strainResults" type="text/x-handlbars-template">
   {{#each strain}}
   <ul>
-    <h2>{{name}}</h2>
+    <h3>{{name}}</h2>
     <li>Seed Company: {{seedCompany.name}}</li>
     <li>Seed Company UCPC: {{seedCompany.ucpc}}</li>
     </ul>
@@ -101,13 +101,13 @@
     <!-- Renders Strain List -->
     <div class="row">
       <div class="ten column" id="weeds" style="margin-top: 5%">
-        <h3>Strains</h3>
+        <h2>Strains</h2>
         <form id="seedForm">
           <fieldset>
             <label for="">FIND SEED COMPANY FOR STRAIN</label>
             <input type="text" name="strainSearch" id="strainSearch" placeholder="Search Strains">
+            <button id="seedSearch" type="submit">Search</button><hr/>
           </fieldset>
-          <button id="seedSearch" type="submit">Search</button>
           <ul id="strains"></ul>
           <!-- append strains handlebars template to empty ul tag -->
           <button type="button" id="prev">Previous 10</button>
@@ -120,27 +120,34 @@
 
 
   <div class="row">
-    <div class="ten column" id="about" style="margin-top: 5%">
+    <div class="twelve columns" id="about" style="margin-top: 5%">
       <h3>High/Low Team</h3>
       <ul class="float">
-        <li class="one"><h4>Isaiah</h4>
+        <li class="six columns">
+          <img src="/images/isaiah.png" width="300px"/>
+          <h4>Isaiah</h4>
           <p>Come along, Pond! Bow ties are cool. No idea. Just do what I do: hold tight and pretend it's a plan. Brave heart, Clara. Look at me. No plans, no backup, no weapons worth a damn. Oh, and something else I don't have: anything to lose. So, if you're sitting up there with your silly little spaceships and your silly little guns and you've any plans on taking the Pandorica tonight; just remember who's standing in your way. Remember every black day I ever stopped you and then, and then, do the smart thing. Let somebody else try first.</p>
         </li>
 
-       <li class="two"><h4>Aaron</h4>
-         <p>Aaron moved to Seattle from San Francisco in 1999.  He worked in retail and bank management for many years but transitioned into a role as an Office Manager and Paralegal in 2012. During that time he assisted on several high profile lawsuits including the Oso Land Slide case in Snohomish County. Earlier this year he decided that he needed a change and a career more inline with the direction Seattle has been moving. This led him to Code Fellows and a future in tech. Aaron moved to Seattle in 1999. I have spent the last 5 years working as a Office Manager/Paralegal but decided earlier this year I needed a change and enrolled in the 101 course. I loved it and here I am.</p>
+        <li class="six columns">
+          <img src="/images/Aaron.png" width="300px"/>
+          <h4>Aaron</h4>
+          <p>Aaron moved to Seattle from San Francisco in 1999.  He worked in retail and bank management for many years but transitioned into a role as an Office Manager and Paralegal in 2012. During that time he assisted on several high profile lawsuits including the Oso Land Slide case in Snohomish County. Earlier this year he decided that he needed a change and a career more inline with the direction Seattle has been moving. This led him to Code Fellows and a future in tech. Aaron moved to Seattle in 1999. I have spent the last 5 years working as a Office Manager/Paralegal but decided earlier this year I needed a change and enrolled in the 101 course. I loved it and here I am.</p>
        </li>
 
+       <li class="six columns">
+         <img src="/images/michelle.png" width="300px"/>
+         <h4>Michelle</h4>
+         <p>Michelle Scharlock is pursuing the Full Stack Javascript development track at Code Fellows and is having a blast in the 301 class. She is fascinated by single page apps and has a love of all things big data developed during her job promoting SQL Server at Waggener Edstrom.Her life before tech included several formative years after graduating from McGill University  working for nonprofits, including the Ronald McDonald House of Western Washington and Alaska, Metropolitan Opera National Council Northwest, the Seattle Shakespeare Company, the Seattle Opera, and the America’s Music Festivals radio series just to name a few.In her spare time, she can be found hunting for antiques, taking ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.</p>
+       </li>
 
-      <li class="three"><h4>Michelle</h4>
-        <p>Michelle Scharlock is pursuing the Full Stack Javascript development track at Code Fellows and is having a blast in the 301 class. She is fascinated by single page apps and has a love of all things big data developed during her job promoting SQL Server at Waggener Edstrom.Her life before tech included several formative years after graduating from McGill University  working for nonprofits, including the Ronald McDonald House of Western Washington and Alaska, Metropolitan Opera National Council Northwest, the Seattle Shakespeare Company, the Seattle Opera, and the America’s Music Festivals radio series just to name a few.In her spare time, she can be found hunting for antiques, taking ukulele lessons, and writing plays. Insatiably curious, she is probably raiding your local library right this minute.</p>
-    </li>
-
-      <li class="four"><h4>Cameron</h4>
-        <p>She see the polo draws, she start to debriefing. You say you got a man, well I don't care girl. Drive slow homie, drive slow. To tell young Shmurda that he had some better options. Till it's evening time,. I need all my bad mamis, front and center. I'm in the walls now, I'm wired up. [Verse 1]. Me gusta mami, y yo te quiero. Cause I'm right here, he way over there girl. Better get your man if he sentimental. 'Cause we ain't just letting off the instrumentals no more. The force will be with you always. Drive slow homie, drive slow.</p>
-      </li>
-      </div>
-    </div> -->
+       <li class="six columns">
+         <img src="/images/cam.png" width="300px"/>
+         <h4>Cameron</h4>
+         <p>She see the polo draws, she start to debriefing. You say you got a man, well I don't care girl. Drive slow homie, drive slow. To tell young Shmurda that he had some better options. Till it's evening time,. I need all my bad mamis, front and center. I'm in the walls now, I'm wired up. [Verse 1]. Me gusta mami, y yo te quiero. Cause I'm right here, he way over there girl. Better get your man if he sentimental. 'Cause we ain't just letting off the instrumentals no more. The force will be with you always. Drive slow homie, drive slow.</p>
+       </li>
+     </div>
+   </div> 
 
 
   </div>
