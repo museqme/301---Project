@@ -50,6 +50,9 @@
 
 /* For devices larger than 550px */
 @media (min-width: 550px) {
+  .fa.fa-bars {
+    display: none;
+  }
   .container {
     width: 80%; }
   .column,
