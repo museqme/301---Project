@@ -18,11 +18,7 @@ let errorCallback = function(err) {
 $.getJSON({
   url: 'https://www.cannabisreports.com/api/v1.0/strains',
   headers: {
-    beforeSend: function(origin) {
-      origin.setRequestHeader('Accept', 'https://www.cannabisreports.com/api/v1.0/strains');
-      origin.setRequestHeader('Authorization', 'X-API-Key', `${X_API_KEY}`);
-      origin.send();
-    }
+    Authorization: `${X_API_KEY}`
   }
 })
     .then(sucessCallback, errorCallback);
