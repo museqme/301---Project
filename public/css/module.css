@@ -24,7 +24,9 @@ Clean #DFDCE3        The clearish white*/
 /*font-family: 'Black Ops One', cursive; HEADER ONLY
 font-family: 'Sarala', sans-serif;*/
 
-
+.float{
+  text-decoration: none;
+}
 .fa {
   color: #F7EF6A;
 }
