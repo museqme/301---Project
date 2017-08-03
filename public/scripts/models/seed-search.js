@@ -6,8 +6,8 @@ $('#seedForm').submit(function(event) {
   console.log(strainSearch);
   // return strainSearch
 
-  $.getJSON('//www.cannabisreports.com/api/v1.0/strains/search/' + strainSearch)
-
+  $.getJSON('//www.cannabisreports.com/api/v1.0/strains/search/lemon')
+// v strainSearch
   .then(searchRequest, errorCallback);
 });
 let searchRequest = function(data) {

@@ -6,15 +6,17 @@ let sucessCallback = function(data) {
   var obj = data;
   var objToArr = Object.keys(obj).map(function(key) {return obj[key]});
   console.log(objToArr);
-  var dataArr = objToArr[0];
-  console.log(dataArr);
-  var metaArray = objToArr[1];
-  console.log(metaArray);
-  var metaObjToArr = Object.keys(obj).map(function(key) {return obj[key]});
-  console.log(metaObjToArr);
   let template = Handlebars.compile($('#strains-template').html())
   $('#strains').html(template({strain: dataArr}))
+
 }
+
+var dataArr = objToArr[1];
+console.log(dataArr);
+var url = dataArr.pagination.links.next;
+console.log(url);
+let next = url;
+
 
 // var thing = function(data) {
 //   var metaNext = data.meta.pagination.links.next;
@@ -33,14 +35,33 @@ $.getJSON('/strains')
     .then(sucessCallback, errorCallback);
 
 
-// $('#next').on('click', function() {
-//   $.getJSON('/strains')
-//   .then(thing, errorCallback);
-// })
-//
-// $('#prev').on('click', function() {
-//   $.getJSON('/strains').then(thing, errorCallback)
-// });
+$('#next').on('click', function() {
+  $.getJSON('/strains')
+  .then(sucessCallback, errorCallback);
+})
+
+$('#prev').on('click', function() {
+  $.getJSON('/strains').then(sucessCallback, errorCallback)
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // let hideAll = function() {
 //   $('.logo').show().siblings().hide();
