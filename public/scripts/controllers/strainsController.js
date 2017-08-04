@@ -1,6 +1,5 @@
 'use strict';
 var app = app || {};
-
 (function(module) {
   const strainsController = {};
   strainsController.index = () => {
@@ -10,6 +9,5 @@ var app = app || {};
     $('#about').hide();
     $('.mainNav').show();
   };
-
   module.strainsController = strainsController;
 })(app);
