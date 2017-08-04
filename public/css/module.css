@@ -32,6 +32,7 @@ font-family: 'Sarala', sans-serif;*/
   font-size: 3em;
   text-decoration: none;
   display: inline-block;
+  float: right;
   padding-right: .5em;
 }
 
