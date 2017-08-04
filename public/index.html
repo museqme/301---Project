@@ -35,15 +35,12 @@
 
   <script id="strains-template" type="text/x-handlebars-template">
     {{#each strain}}
-
     <ul>
-      <h3>{{name}}</h3>
-      <li>Genetics: {{genetics.names}}</li>
+      <h3>{{name}}</h2>
       <li>Seed Company: {{seedCompany.name}}</li>
       <li>Seed Company UCPC: {{seedCompany.ucpc}}</li>
-      <li>Strain UCPC: {{ucpc}}</li><hr/>
+      <li>Learn More: <a href="{{url}}">{{url}}</a></li>
     </ul>
-
     {{/each}}
   </script>
   <script id="strainResults" type="text/x-handlbars-template">
@@ -73,8 +70,8 @@
           <fieldset>
             <ul class="nav">
               <label for="username"></label>
-              <li class="login"><input name="username" type="text" required/></li>
-              <li class="login"><input name="password" type="text" required/></li>
+              <li class="login"><input name="username" type="text" required placeholder="username"></li>
+              <li class="login"><input name="password" type="text" required placeholder="password"></li>
                 <label id="password" for="password"></label>
                 </select>
                 </li>
@@ -87,8 +84,8 @@
   </header>
   <div class="siteInfo">
     <p><em><i class="fa fa-keyboard-o" aria-hidden="true"></i> LOGIN <br>
-      <br><i class="fa fa-search" aria-hidden="true"></i> SEARCH YOUR STRAIN <br>
-      <br><i class="fa fa-money" aria-hidden="true"></i>BUY YOUR SEEDS</em></p>
+      <i class="fa fa-search" aria-hidden="true"></i> SEARCH YOUR STRAIN <br>
+      <i class="fa fa-money" aria-hidden="true"></i>BUY YOUR SEEDS</em></p>
   </div>
 
   <!-- Primary Page Layout
