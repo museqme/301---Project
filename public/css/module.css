@@ -32,13 +32,7 @@ font-family: 'Sarala', sans-serif;*/
   font-size: 3em;
   text-decoration: none;
   display: inline-block;
-  float: right;
   padding-right: .5em;
-}
-
-.nav li {
-  text-decoration: none;
-  display: inline-block;
 }
 
 .siteInfo {
@@ -49,8 +43,4 @@ font-family: 'Sarala', sans-serif;*/
   background-color: rgba(70, 92, 139, .85);
   padding: 1em;
   max-width: 80%;
-}
-
-.float ul {
-  text-decoration: none;
 }
