@@ -31,6 +31,24 @@ function proxyCanApi(request, response) {
   }))(request, response);
 }
 
+  $.getJSON('//www.cannabisreports.com/api/v1.0/strains/search/' + strainSearch)
+    .then(searchRequest, errorCallback);
+  });
+
+let searchRequest = function(data) {
+  console.log(data)
+  var obj = data;
+  var objToArr = Object.keys(obj).map(function(key) {return obj[key]});
+  console.log(objToArr);
+  var dataArr = objToArr[0];
+  console.log(dataArr);
+  let template = Handlebars.compile($('#strainResults').html())
+  $('#strains').html(template({strain: dataArr}))
+};
+
+
+
+
 // function proxyCanApiSeeds(request, response) {
 //   console.log('Isaiah was here: proxyCanApiSeeds');
 //   console.log(request.headers)
