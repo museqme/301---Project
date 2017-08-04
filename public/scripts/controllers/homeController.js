@@ -6,11 +6,16 @@ var app = app || {};
   homeController.index = () => {
     $('#weeds').hide();
     $('#about').hide();
-    $('.nav').show();
+    $('#logoSwap').hide();
+    $('.mainNav').hide();
+    $('#loginSwap').show();
     $('#submitButton').on('click', function(event) {
       event.preventDefault();
       $('#weeds').show();
-      $('.nav').hide();
+      $('#logoSwap').fadeIn('slow');
+      $('#loginSwap').hide();
+      $('.mainNav').show();
+      $('#topLogo').hide();
       $('#about').hide();
     })
   };

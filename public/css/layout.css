@@ -33,10 +33,21 @@ font-family: 'Sarala', sans-serif;*/
   top: 5em;
 }*/
 
+#loginSwap li {
+  text-decoration: none;
+  display: inline-block;
+}
+
 #topLogo {
   padding: 3em;
   padding-bottom: 3.5em;
 }
+
+#topLogo {
+  padding: 3em;
+  padding-bottom: 3.5em;
+}
+
 #user_nav {
   color: #DFDCE3;
   float: right;
