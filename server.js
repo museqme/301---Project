@@ -42,9 +42,21 @@ function proxyCanApiSeeds(request, response) {
   }))(request, response);
 }
 
+function proxyCanApiNext(request, response) {
+  // console.log('Isaiah was here: proxyCanApiSeeds');
+  // console.log(request.headers)
+  // console.log('Routing CannabisReports request for search query!');
+  console.log(request.params[1]);
+  (requestProxy({
+    url: `https://www.cannabisreports.com/api/v1.0/strains/${request.params[1]}`,
+    headers: {Authorization: `${process.env.X_API_KEY}`}
+  }))(request, response);
+}
+
 
 app.get('/strains', proxyCanApi);
 app.get('/search/*', proxyCanApiSeeds);
+app.get('/strains/*', proxyCanApiNext);
 
 app.listen(PORT, function() {
   console.log(`'listening on PORT: ${PORT}'`)
