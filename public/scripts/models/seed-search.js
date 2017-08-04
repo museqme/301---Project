@@ -21,7 +21,3 @@ $('#seedForm').submit(function(event) {
   $.getJSON('/search/' + searchReq)
   .then(searchRequest, errorCallback);
 });
-
-let errorCallback = function(err) {
-  console.error(err)
-}
