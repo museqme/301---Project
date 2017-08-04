@@ -8,29 +8,7 @@ let sucessCallback = function(data) {
   var dataArr = objToArr[0];
   let template = Handlebars.compile($('#strains-template').html())
   $('#strains').html(template({strain: dataArr}))
-
-  // var metaObjNext = objToArr[1].pagination.links.next;
-  // localStorage.setItem('next', metaObjNext);
-  // var next = localStorage.getItem('next');
-  // console.log(next);
-  //
-  // var metaObjPrev = objToArr[1].pagination.links.previous;
-  // localStorage.setItem('prev', metaObjPrev);
-  // var prev = localStorage.getItem('prev');
-  // console.log(prev);
 }
-
-// $('#next').on('click', function() {
-//   var next = localStorage.getItem('next');
-//   $.getJSON(next)
-//   .then(sucessCallback, errorCallback);
-// })
-//
-// $('#prev').on('click', function() {
-//   var prev = localStorage.getItem('prev');
-//   $.getJSON(prev)
-//   .then(sucessCallback, errorCallback);
-// })
 
 const errorCallback = function(err) {
   console.error(err)

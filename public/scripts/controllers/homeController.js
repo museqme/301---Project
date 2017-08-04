@@ -18,6 +18,5 @@ var app = app || {};
    $('#about').hide();
   })
  };
- // $('.logo').show().siblings().hide();
  module.homeController = homeController;
 })(app);
