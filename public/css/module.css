@@ -26,13 +26,14 @@ font-family: 'Sarala', sans-serif;*/
 .fa {
   color: #F7EF6A;
 }
-.header {
+/*.header {
   background-color: #465C8B ;
   max-width: 100%;
+  min-width: 440px;
   border: 5px solid #93C178;
   padding: 10px 10px 10px 10px;
   margin: 25px;
-}
+}*/
 
 .mainNav li {
   color: ;

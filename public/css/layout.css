@@ -1,6 +1,5 @@
 /*from SMACCS*/
 /*Layout Rules
-
 CSS, by its very nature, is used to lay elements out on the page.
 However, there is a distinction between layouts dictating the major
 and minor components of a page. The minor components—such as a callout,
@@ -8,37 +7,38 @@ or login form, or a navigation item—sit within the scope of major
 components such as a header or footer. I refer to the minor components
 as Modules and will dive into those in the next section. The major
 components are referred to as Layout styles.
-
 Layout styles can also be divided into major and minor styles based
 on reuse. Major layout styles such as header and footer are traditionally
 styled using ID selectors but take the time to think about the
 elements that are common across all components of the page and use
 class selectors where appropriate.*/
-
 /*Color Scheme
 Fresh #F7EF6A        the yellow
 Vermillion #93C178   the green
 Sunshine #465C8B     the blue, oddly enough
 Clean #DFDCE3        The clearish white*/
-
 /*font-family: 'Black Ops One', cursive; HEADER ONLY
 font-family: 'Sarala', sans-serif;*/
-#instructions {
-font-family: 'Fredoka One', cursive;
-}
-#michelle {
+/*#michelle {
   position: relative;
   bottom: 30em;
-
 }
 #aaron {
   position: relative;
   top: 5em;
+}*/
+#loginSwap li {
+  text-decoration: none;
+  display: inline-block;
 }
-
 #topLogo {
   padding: 3em;
   padding-bottom: 3.5em;
+}
+#topLogo2 {
+  min-width: 500px;
+  /*padding: 3em;
+  padding-bottom: 3.5em;*/
 }
 #user_nav {
   color: #DFDCE3;
@@ -48,11 +48,9 @@ font-family: 'Fredoka One', cursive;
 #submitButton{
   background-color: #DFDCE3;
 }
-
 #dropDown {
   background-color: #DFDCE3;
 }
-
 #weeds {
   background-color: #93C178;
   border: 5px solid #F7EF6A;
