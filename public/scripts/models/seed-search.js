@@ -6,7 +6,6 @@ $('#seedForm').submit(function(event) {
   localStorage.setItem('data', strainSearch);
   var searchReq = localStorage.getItem('data');
   console.log(searchReq);
-  // return strainSearch
 
   let searchRequest = function(data) {
     console.log(data)
@@ -23,8 +22,6 @@ $('#seedForm').submit(function(event) {
   .then(searchRequest, errorCallback);
 });
 
-
-
-    // let errorCallback = function(err) {
-    //   console.error(err)
-    // }
+let errorCallback = function(err) {
+  console.error(err)
+}
